@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=League+Script|Roboto');
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	}
+h3 {
+	color: #FF9EA9;
+	text-transform: uppercase;
+}
+p {
+	text-align: justify;
+}
+a, a:hover, a:visited {
+	color: #FF9EA9;
+}
+.btn-default {
+	background-color: #FF9EA9;
+	border-color: #FF9EA9;
+	color: #FFFFFF;
+}
+.menu {
+	background-color: #000000;
+	padding: 15px 0;
+}
+.menu a{
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+.menu a:hover{
+	color: #FFAFA4;
+	text-decoration: none;
+}
+.head {
+	background-image: url('../img/headerbg.jpg');
+	background-size: cover;
+	height: 300px;
+	padding: 50px 0;
+}
+.titulo h1 {
+	color: #FFFFFF;
+	font-family: 'League Script', cursive;
+	font-size: 72px;
+	font-weight: bold;
+	text-align: center;
+}
+.titulo h3{
+	color: #FFFFFF;
+	text-align: center;
+	text-transform: uppercase;
+}
