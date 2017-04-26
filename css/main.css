@@ -8,6 +8,9 @@
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 	}
+.container {
+	width: 80%;
+}
 h3 {
 	color: #FF9EA9;
 	text-transform: uppercase;
@@ -23,9 +26,15 @@ a, a:hover, a:visited {
 	border-color: #FF9EA9;
 	color: #FFFFFF;
 }
+.burger-menu {
+	display: none;
+}
+
 .menu {
 	background-color: #000000;
-	padding: 15px 0;
+	padding: 20px;
+	position: fixed;
+	z-index: 5;
 }
 .menu a{
 	color: #FFFFFF;
@@ -40,10 +49,11 @@ a, a:hover, a:visited {
 	background-size: cover;
 	height: 300px;
 	padding: 50px 0;
+	margin-top: 60px;
 }
 .titulo h1 {
 	color: #FFFFFF;
-	font-family: 'League Script', cursive;
+	font-family: 'League Script', sans-serif;
 	font-size: 72px;
 	font-weight: bold;
 	text-align: center;
@@ -53,3 +63,138 @@ a, a:hover, a:visited {
 	text-align: center;
 	text-transform: uppercase;
 }
+#about-me, #obras, #proyectos, #muestras, #contacto {
+	margin: 40px 0;
+}
+.about-parrafo {
+	padding-top: 30px;
+}
+#carousel-example-generic {
+	padding: 0;
+}
+#muestras .thumbnail{
+	height: 360px;
+	border-color: #ffd3ea;
+
+}
+#contacto h4, #contacto p {
+	text-align: center;
+}
+#contacto h4 i {
+	background-color: #FF9EA9;
+	color: #FFFFFF;
+	border: 1px #FF9EA9 solid;
+	border-radius: 50%;
+	padding: 20px;
+}
+#contacto form {
+	margin-top: 20px;
+}
+
+footer {
+	background-color: #000000;
+	padding: 15px 20px;
+}
+footer div {
+	color: #FFFFFF;
+}
+#redes-sociales {
+	text-align: right;
+}
+#redes-sociales a {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+
+/* ---------------------- Media Queries ---------------------- */
+
+/*----------------------- Tablet Landscape ------------------- */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+	#redes-sociales, #copyright p {
+		text-align: center;
+	}
+	#muestras .thumbnail{
+		height: 400px;
+	}
+
+}
+/*----------------------- Tablet Portrait --------------------- */
+@media all and (min-width: 480px) and (max-width: 768px) { 
+	.menu {
+		display: none;
+	}
+	.burger-menu{
+		position: fixed;
+		display: inline-block;
+		z-index: 5;
+		border-color: #ff7484;
+	}
+	.burger-button, .burger-button:hover, burger-button:active, .burger-list{
+		margin: 5px 0 0 5px;
+		background-color: #FF9EA9;
+		border-radius: 0;
+		border-color: #ff7484;
+	}
+	.burger-menu li a {
+		color: #FFFFFF;
+		font-weight: bold;
+	}
+	.head {
+		margin-top: 0;
+		height: 250px;
+		z-index: 1;
+	}
+	#redes-sociales, #copyright p {
+		text-align: center;
+	}
+	#muestras .thumbnail{
+		height: 420px;
+	}
+
+}
+/*----------------------- Phone Landscape & Smaller ----------- */
+@media all and (max-width: 480px) { 
+	.menu {
+		display: none;
+	}
+	.burger-menu{
+		position: fixed;
+		display: inline-block;
+		z-index: 5;
+		border-color: #ff7484;
+	}
+	.burger-button, .burger-button:hover, burger-button:active, .burger-list{
+		margin: 5px 0 0 5px;
+		background-color: #FF9EA9;
+		border-radius: 0;
+		border-color: #ff7484;
+	}
+	.burger-menu li a {
+		color: #FFFFFF;
+		font-weight: bold;
+	}
+	.head {
+		margin-top: 0;
+		height: 250px;
+		z-index: 1;
+	}
+	.head h1 {
+		font-size: 48px;
+	}
+	.head h2 {
+		font-size: 36px;
+	}
+	#redes-sociales, #copyright p {
+		text-align: center;
+	}
+	#muestras .thumbnail{
+		height: 340px;
+	}
+
+}
+
