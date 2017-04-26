@@ -9,7 +9,7 @@
 	font-family: 'Roboto', sans-serif;
 	}
 .container {
-	width: 80%;
+	width: 70%;
 }
 h3 {
 	color: #FF9EA9;
@@ -68,6 +68,9 @@ a, a:hover, a:visited {
 }
 .about-parrafo {
 	padding-top: 30px;
+}
+#curriculum {
+	color: #FFFFFF;
 }
 #carousel-example-generic {
 	padding: 0;
