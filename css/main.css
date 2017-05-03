@@ -20,6 +20,7 @@ p {
 }
 a, a:hover, a:visited {
 	color: #FF9EA9;
+	text-decoration: none;
 }
 .btn-default {
 	background-color: #FF9EA9;
@@ -57,6 +58,7 @@ a, a:hover, a:visited {
 	font-size: 72px;
 	font-weight: bold;
 	text-align: center;
+	margin: 60px auto;
 }
 .titulo h3{
 	color: #FFFFFF;
@@ -76,7 +78,7 @@ a, a:hover, a:visited {
 	padding: 0;
 }
 #muestras .thumbnail{
-	height: 360px;
+	height: 370px;
 	border-color: #ffd3ea;
 
 }
@@ -87,7 +89,7 @@ a, a:hover, a:visited {
 	background-color: #FF9EA9;
 	color: #FFFFFF;
 	border: 1px #FF9EA9 solid;
-	border-radius: 50%;
+	border-radius: 100%;
 	padding: 20px;
 }
 #contacto form {
@@ -108,11 +110,6 @@ footer div {
 	color: #FFFFFF;
 	font-size: 16px;
 }
-
-.carousel-inner > .item > img {
-    margin: 0 auto;
-}
-
 
 /* ---------------------- Media Queries ---------------------- */
 
@@ -156,7 +153,7 @@ footer div {
 		text-align: center;
 	}
 	#muestras .thumbnail{
-		height: 420px;
+		height: auto;
 	}
 
 }
@@ -196,7 +193,10 @@ footer div {
 		text-align: center;
 	}
 	#muestras .thumbnail{
-		height: 340px;
+		height: auto;
+	}
+	#obras {
+		display: none;
 	}
 
 }
