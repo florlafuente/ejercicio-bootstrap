@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-			<header>
+			<header id="arriba">
 				<div class="row">
 					<div class="burger-menu">
 						<div class="dropdown">
@@ -19,21 +19,21 @@
 							<i class="fa fa-bars" aria-hidden="true"></i>
 							</button>
 							<ul class="dropdown-menu burger-list" aria-labelledby="dropdownMenu1">
-								<li><a href="#">Home</a></li>
-								<li><a href="#about-me">Sobre mí</a></li>
-								<li><a href="#proyectos">Proyectos</a></li>
-								<li><a href="#muestras">Muestras</a></li>
-								<li><a href="#contacto">Contacto</a></li>
+								<li><a data-id="arriba" class="mov">Home</a></li>
+								<li><a data-id="about-me" class="mov">Sobre mí</a></li>
+								<li><a data-id="proyectos" class="mov">Proyectos</a></li>
+								<li><a data-id="muestras" class="mov">Muestras</a></li>
+								<li><a data-id="contacto" class="mov">Contacto</a></li>
 							</ul>
 						</div>
 					</div>
 					<nav class="col-xs-12 col-sm- 12 col-md-12 menu">	<!-- Inicio Menu -->
 					<div class="row">
-						<a href="#" class="col-xs-2  col-xs-offset-1 col-sm-offset-1 col-md-offset-1 text-center">Home</a>
-						<a href="#about-me" class="col-xs-2 text-center">Sobre mí</a>
-						<a href="#proyectos" class="col-xs-2 text-center">Proyectos</a>
-						<a href="#muestras" class="col-xs-2 text-center">Muestras</a>
-						<a href="#contacto" class="col-xs-2 text-center">Contacto</a>
+						<a data-id="arriba" class="col-xs-2  col-xs-offset-1 col-sm-offset-1 col-md-offset-1 text-center mov">Home</a>
+						<a data-id="about-me" class="col-xs-2 text-center mov">Sobre mí</a>
+						<a data-id="proyectos" class="col-xs-2 text-center mov">Proyectos</a>
+						<a data-id="muestras" class="col-xs-2 text-center mov">Muestras</a>
+						<a data-id="contacto" class="col-xs-2 text-center mov">Contacto</a>
 					</div>
 					</nav>	<!--Fin Menu -->
 				</div>
@@ -47,7 +47,7 @@
 			</header>
 		</div>
 		<div class="container">
-			<div id="about-me">	<!-- Inicio Sobre mí -->
+			<div class="seccion" id="about-me">	<!-- Inicio Sobre mí -->
 			<div class="row">
 				<h3 class="col-xs-12 col-sm-12 col-md-12">Sobre mí</h3>
 			</div>
@@ -59,11 +59,11 @@
 					<p>Me llamo Florencia Lafuente. Nací en 1990 en Buenos Aires, donde resido.<br>
 						Estudié Fotografía en la Escuela de Arte Fotográfico de Avelllaneda. Realicé la Diplomatura de Fotografía Documental en la Facultad de Filosofía y Letras de la UBA.  Asistí a diversos talleres y seminarios de Arte Textil.<br>
 					Desde 2013, expongo mi producción fotográfica y textil en diversos lugares de Argentina. Mi obra forma parte de colecciones privadas en Argentina y en el exterior.</p>
-					<button type="button" class="btn btn-default pull-right"><a href="files/CV.pdf" target="_blank" id="curriculum">Download CV.pdf</a></button>
+					<button type="button" id="vermas" data-id="hide" class="btn btn-default pull-right"><a href="files/CV.pdf" target="_blank" id="curriculum">Download CV.pdf</a></button>
 				</div>
 			</div>
 			</div>	<!-- Fin Sobre mí -->
-			<div id="obras" class="row"><!-- Inicio Carousel-->
+			<div id="obras" class="row seccion"><!-- Inicio Carousel-->
 			<div id="carousel-example-generic" class="carousel slide micarousel col-md-10 col-md-offset-1" data-ride="carousel">
 				<ol class="carousel-indicators">
 					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -103,7 +103,7 @@
 				</a>
 			</div>
 			</div> 	<!--Fin Carousel -->
-			<div id="proyectos">	<!-- Inicio Proyectos -->
+			<div class="seccion" id="proyectos">	<!-- Inicio Proyectos -->
 			<div class="row">
 				<h3 class="col-md-12">Algunos proyectos</h3>
 			</div>
@@ -128,7 +128,7 @@
 				</div>
 			</div>
 			</div>	<!-- Fin Proyectos -->
-			<div id="muestras">	<!--Inicio Muestras -->
+			<div class="seccion" id="muestras">	<!--Inicio Muestras -->
 			<div class="row">
 				<h3 class="col-md-12">Últimas muestras</h3>
 			</div>
@@ -175,7 +175,7 @@
 				</div>
 			</div>
 			</div>	<!--Fin muestras -->
-			<div id="contacto">	<!--Inicio Contacto -->
+			<div class="seccion" id="contacto">	<!--Inicio Contacto -->
 				<div class="row">
 					<h3 class="col-md-12">Contacto</h3>
 				</div>
@@ -193,18 +193,22 @@
 						<p>lafuente.florencia@gmail.com</p>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12" id="formulario"> <!--Formulario -->
-					<form action="" class="row">
-						<div class="form-group col-xs-12 col-sm-6 col-md-6">
+					<form action="php/enviar.php" method="post" name="formcontacto" class="row">
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<div class="form-group">
 							<input type="text" name="nombre" placeholder="Nombre" class="form-control">
-						</div>
-						<div class="form-group col-xs-12 col-sm-6 col-md-6">
+							</div>
+							<div class="form-group">
 							<input type="text" name="apellido" placeholder="Apellido" class="form-control">
-						</div>
-						<div class="form-group col-md-12">
+							</div>
+							<div class="form-group">
 							<input type="e-mail" name="mail" placeholder="E-mail" class="form-control">
+							</div>
 						</div>
-						<div class="form-group col-md-12">
-							<textarea placeholder="Comentarios" class="form-control"></textarea>
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<div class="form-group">
+								<textarea placeholder="Comentarios" name="comentarios" class="form-control" rows="6"></textarea>
+							</div>
 						</div>
 						<div class="form-group col-md-12">
 							<button type="button" class="btn btn-default pull-right">Enviar</button>
@@ -425,7 +429,8 @@
 </div>
 </footer>	<!--Fin Footer -->
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!--Llamado a las Jquery de bootstrap-->
+<script src="js/jquery-3.2.1.min.js"></script><!--Llamado a las Jquery de bootstrap-->
 <script src="js/bootstrap.min.js"></script> <!--Lllamado a javascript de bootstrap-->
+<script type="text/javascript" src="js/functions.js"></script>
 </body>
 </html>
