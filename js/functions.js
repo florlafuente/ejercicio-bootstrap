@@ -1,10 +1,59 @@
+var errores = [];
 $(document).ready(function(){
-	$('.mov').on('click', function(){
-		idA=$(this).data('id');
-		id= '#' + idA;
+	$('.mov').on('click', function(event){
+		event.preventDefault();
+		id=$(this).data('id');
 		$('html, body').animate({scrollTop : $(id).offset().top},800);
 	});
 	
+	$('#enviar').on('click',function() {
+		$('.mensaje').css('display', 'none');
+		errores = [];
+		var nombre = $('#nombre').val();
+		 if (!soloLetras(nombre) || nombre == '') {
+		 	errores ++;
+		 	console.log('Error nombre');
+		 } else {
+		 	console.log('Nombre ok');
+		 }
+		 var apellido = $('#apellido').val();
+		if (!soloLetras(apellido) || apellido == '') {
+			errores ++;
+			console.log('Error apellido');
+		} else {
+			console.log('apellido ok');
+		}
+		var mail = $('#mail').val();
+		if (!mailCorrecto(mail) || mail == '') {
+			errores ++;
+		 	console.log('Error mail');
+		} else {
+			console.log('mail ok');
+		}
+		 var comment = $('#comment').val();
+		if (comment == '') {
+			errores ++;
+		 	console.log('Error com');
+		}else {
+		 console.log('comment ok');
+		}
+		if (errores.length == 0) {
+			var datos = $('#formulario').serialize();
+			console.log(datos);
+			$('#formulario')[0].reset();
+			$('#error').css('display', 'none');
+			$('#exito').css('display', 'block');
+		} else {
+			$('#error').css('display', 'block');
+		}
+	});
+	$('#borrar').on('click',function() {
+		$('.mensaje').css('display', 'none');
+		console.log('hola reset');
+		$('#formulario')[0].reset();
+		errores = [];
+	});
+
 });
 
 function soloLetras(x) { //Valido apellido y nombre con expresion regular//
@@ -14,9 +63,15 @@ function soloLetras(x) { //Valido apellido y nombre con expresion regular//
 		return true;
 	}
 	return false;
-	} //Fin soloLetras //
+} //Fin soloLetras //
 
-
+function mailCorrecto(x) {
+	expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	if(expr.test(x)) {
+		return true;
+	}
+	return false;
+} // Fin mailCorrecto //
 /*	Funcion para mostrar contenido y ocultarlo
 	$('.vermas').on('click', function(){
 	var vid = $(this).data('id');
@@ -66,5 +121,7 @@ function soloLetras(x) { //Valido apellido y nombre con expresion regular//
 	});
 	$("#linkcontactobur").on("click", function(){
 		$("html,body").animate({ scrollTop : $("#contacto").offset().top  }, 1000 );
-	});*/
+	});
+
+	*/
 	

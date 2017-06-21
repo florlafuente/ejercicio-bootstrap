@@ -19,22 +19,22 @@
 							<i class="fa fa-bars" aria-hidden="true"></i>
 							</button>
 							<ul class="dropdown-menu burger-list" aria-labelledby="dropdownMenu1">
-								<li><a data-id="arriba" class="mov">Home</a></li>
-								<li><a data-id="about-me" class="mov">Sobre mí</a></li>
-								<li><a data-id="proyectos" class="mov">Proyectos</a></li>
-								<li><a data-id="muestras" class="mov">Muestras</a></li>
-								<li><a data-id="contacto" class="mov">Contacto</a></li>
+								<li><a href="#" data-id="#arriba" class="mov">Home</a></li>
+								<li><a href="#" data-id="#about-me"  class="mov">Sobre mí</a></li>
+								<li><a href="#" data-id="#proyectos" class="mov">Proyectos</a></li>
+								<li><a href="#" data-id="#muestras" class="mov">Muestras</a></li>
+								<li><a href="#" data-id="#contacto" class="mov">Contacto</a></li>
 							</ul>
 						</div>
-					</div>
+					</div> <!--Fin Menú hamburguesa -->
 					<nav class="col-xs-12 col-sm- 12 col-md-12 menu">	<!-- Inicio Menu -->
-					<div class="row">
-						<a data-id="arriba" class="col-xs-2  col-xs-offset-1 col-sm-offset-1 col-md-offset-1 text-center mov">Home</a>
-						<a data-id="about-me" class="col-xs-2 text-center mov">Sobre mí</a>
-						<a data-id="proyectos" class="col-xs-2 text-center mov">Proyectos</a>
-						<a data-id="muestras" class="col-xs-2 text-center mov">Muestras</a>
-						<a data-id="contacto" class="col-xs-2 text-center mov">Contacto</a>
-					</div>
+						<div class="row">
+							<a href="#" data-id="#arriba" class="col-xs-2  col-xs-offset-1 col-sm-offset-1 col-md-offset-1 text-center mov">Home</a>
+							<a href="#" data-id="#about-me" class="col-xs-2 text-center mov">Sobre mí</a>
+							<a href="#" data-id="#proyectos" class="col-xs-2 text-center mov">Proyectos</a>
+							<a href="#" data-id="#muestras" class="col-xs-2 text-center mov">Muestras</a>
+							<a href="#" data-id="#contacto" class="col-xs-2 text-center mov">Contacto</a>
+						</div>
 					</nav>	<!--Fin Menu -->
 				</div>
 				<div class="row">
@@ -59,7 +59,7 @@
 					<p>Me llamo Florencia Lafuente. Nací en 1990 en Buenos Aires, donde resido.<br>
 						Estudié Fotografía en la Escuela de Arte Fotográfico de Avelllaneda. Realicé la Diplomatura de Fotografía Documental en la Facultad de Filosofía y Letras de la UBA.  Asistí a diversos talleres y seminarios de Arte Textil.<br>
 					Desde 2013, expongo mi producción fotográfica y textil en diversos lugares de Argentina. Mi obra forma parte de colecciones privadas en Argentina y en el exterior.</p>
-					<button type="button" id="vermas" data-id="hide" class="btn btn-default pull-right"><a href="files/CV.pdf" target="_blank" id="curriculum">Download CV.pdf</a></button>
+					<button type="button" id="vermas" data-id="hide" class="btn botonn pull-right"><a href="files/CV.pdf" target="_blank" id="curriculum">Download CV.pdf</a></button>
 				</div>
 			</div>
 			</div>	<!-- Fin Sobre mí -->
@@ -192,26 +192,33 @@
 						<h4><i class="fa fa-envelope" aria-hidden="true"></i> E-mail</h4>
 						<p>lafuente.florencia@gmail.com</p>
 					</div>
-					<div class="col-xs-12 col-sm-12 col-md-12" id="formulario"> <!--Formulario -->
-					<form action="php/enviar.php" method="post" name="formcontacto" class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12" > <!--Formulario -->
+					<form action="" method="post" name="formcontacto" class="row" id="formulario">
+					<div class="alert alert-success mensaje" role="alert" id="exito">
+							<strong>Muchas gracias!</strong> El formulario fue enviado exitosamente.
+						</div>
+						<div class="alert alert-danger mensaje" role="alert" id="error">
+							<strong>Cuidado!</strong> Por favor, revisá los campos ingresados.
+						</div>
 						<div class="col-xs-12 col-sm-6 col-md-6">
 							<div class="form-group">
-							<input type="text" name="nombre" placeholder="Nombre" class="form-control">
+							<input type="text" name="nombre" placeholder="Nombre" id="nombre" class="form-control">
 							</div>
 							<div class="form-group">
-							<input type="text" name="apellido" placeholder="Apellido" class="form-control">
+							<input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control">
 							</div>
 							<div class="form-group">
-							<input type="e-mail" name="mail" placeholder="E-mail" class="form-control">
+							<input type="e-mail" name="mail" id="mail" placeholder="E-mail" class="form-control">
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-md-6">
 							<div class="form-group">
-								<textarea placeholder="Comentarios" name="comentarios" class="form-control" rows="6"></textarea>
+								<textarea placeholder="Comentarios" id="comment" name="comentarios" class="form-control" rows="6"></textarea>
 							</div>
 						</div>
-						<div class="form-group col-md-12">
-							<button type="button" class="btn btn-default pull-right">Enviar</button>
+						<div class="form-group col-md-3 pull-right">
+							<button type="button" class="btn botonn" id="enviar">Enviar</button>
+							<button type="reset" class="btn btn-default " id="borrar">Borrar</button>
 						</div>
 						</form>	<!--Fin Formulario -->
 					</div>
