@@ -41,6 +41,24 @@ $(document).ready(function(){
 			var datos = $('#formulario').serialize();
 			console.log(datos);
 			$('#formulario')[0].reset();
+
+			
+			 $.ajax({
+                url: "http://mariabelenalegre.com/ada-api/api.php",
+                type: "post",
+                data: datos,
+                success: function (response) {
+                    // you will get response from your php page (what you echo or print)   
+                  if(response){
+                    console.log(response);   
+                      console.log("todo ok"); 
+                      alert("Formulario enviado correctamente");
+                    }else{  
+                      alert("Error");
+                      location.reload();
+                    }
+                  }           
+          	}); 
 			$('#error').css('display', 'none');
 			$('#exito').css('display', 'block');
 		} else {
